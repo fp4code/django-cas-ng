@@ -241,18 +241,18 @@ user object.
 **CASBackend.bad_attributes_reject(request, username, attributes)**
 
 Rejects a user if SAML username/attributes are not OK. For example, to accept a user belonging
-to departmentNumber 421 only, define in ``mysite/settings.py`` the constants
+to departmentNumber 421 only, define in ``mysite/settings.py`` the constants::
 
     MY_SAML_CONTROL=('departmentNumber', '421')
 
-and the authentication backends
+and the authentication backends::
 
     AUTHENTICATION_BACKENDS = [
         'django.contrib.auth.backends.ModelBackend',
 	'mysite.backends.MyCASBackend',
     ]
 
-and create a file ``mysite/backends.py`` containing
+and create a file ``mysite/backends.py`` containing::
 
     from django_cas_ng.backends import CASBackend
     from django.contrib import messages
