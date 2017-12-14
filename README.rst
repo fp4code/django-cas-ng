@@ -241,7 +241,7 @@ user object.
 **CASBackend.bad_attributes_reject(request, username, attributes)**
 
 Rejects a user if SAML username/attributes are not OK. For example, to accept a user belonging
-to departmentNumber 421 only, define in ``mysite/settings.py`` the constants::
+to departmentNumber 421 only, define in ``mysite/settings.py`` the key-value constant::
 
     MY_SAML_CONTROL=('departmentNumber', '421')
 
